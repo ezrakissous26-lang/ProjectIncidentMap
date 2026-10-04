@@ -11,5 +11,6 @@ export async function clientConnect() {
         console.log('Connected to MongoDB')
     } catch (error) {
         console.log('Error :', error.message)
+        throw error
     }
 }
