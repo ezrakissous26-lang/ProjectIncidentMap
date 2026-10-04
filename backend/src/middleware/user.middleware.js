@@ -1,8 +1,8 @@
-import { userRegister } from "../schemas/user.schema.js";
+import { userCredentials } from "../schemas/user.schema.js";
 
-export async function checkBodyUserRegister(req, res, next) {
+export async function checkBodyUserCredentials(req, res, next) {
     try {
-        await userRegister.parse(req.body)
+        await userCredentials.parse(req.body)
         next()
     } catch (error) {
         return res.status(400).json({
