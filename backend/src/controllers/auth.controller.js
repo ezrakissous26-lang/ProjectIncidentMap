@@ -18,3 +18,8 @@ export async function loginController(req, res, next) {
         next(error)
     }
 }
+
+export async function meController(req, res, next) {
+    const { id, role } = req.user
+    return res.status(200).json({ userId: id, role})
+}
